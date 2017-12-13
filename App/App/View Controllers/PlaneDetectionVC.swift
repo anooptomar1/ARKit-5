@@ -54,6 +54,18 @@ class PlaneDetectionVC: UIViewController, ARSCNViewDelegate {
         sceneView.session.run(configuration)
     }
     
+    // delegate method called when ARKit finds any planes!
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
+        if !(anchor is ARPlaneAnchor) {
+            return
+        }
+        
+        let plane = OverlayPlane(anchor: anchor as! ARPlaneAnchor)
+        
+        node.addChildNode(plane)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
