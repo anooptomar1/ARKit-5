@@ -28,6 +28,7 @@ class OverlayPlane : SCNNode {
         setup()
     }
     
+    // adjust the plane size
     func update(anchor :ARPlaneAnchor) {
         
         self.planeGeometry.width = CGFloat(anchor.extent.x);

@@ -13,6 +13,7 @@ import ARKit
 class PlaneDetectionVC: UIViewController, ARSCNViewDelegate {
     
     var sceneView: ARSCNView!
+    var planes = [OverlayPlane]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,9 +64,24 @@ class PlaneDetectionVC: UIViewController, ARSCNViewDelegate {
         
         let plane = OverlayPlane(anchor: anchor as! ARPlaneAnchor)
         
+        self.planes.append(plane)
+        
         node.addChildNode(plane)
     }
     
+    // delegate function fow when planes are updated
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        
+        let plane = self.planes.filter { plane in
+            return plane.anchor.identifier == anchor.identifier
+        }.first
+        
+        guard let planeFound = plane else {
+            return
+        }
+        
+        planeFound.update(anchor: anchor as! ARPlaneAnchor)
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
