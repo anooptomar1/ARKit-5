@@ -1,16 +1,17 @@
 //
-//  SimpleBoxVC.swift
+//  TextVC.swift
 //  App
 //
-//  Created by Gareth on 12.12.17.
+//  Created by Gareth on 13.12.17.
 //  Copyright © 2017 Gareth. All rights reserved.
 //
+
 
 import UIKit
 import SceneKit
 import ARKit
 
-class SimpleBoxVC: UIViewController, ARSCNViewDelegate {
+class TextVC: UIViewController, ARSCNViewDelegate {
     
     var sceneView: ARSCNView!
     
@@ -31,21 +32,15 @@ class SimpleBoxVC: UIViewController, ARSCNViewDelegate {
         // Create a new scene
         let scene = SCNScene()
         
-        // width height length is in meters!
-        let boxGeo = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0)
-        let boxMat = SCNMaterial()
-        boxMat.diffuse.contents = UIColor.red
+        // @HERE do some shizzle
+        let textGeo = SCNText(string: "Gareth rocks", extrusionDepth: 1.0)
+        textGeo.firstMaterial?.diffuse.contents = UIColor.black
         
-        let box = SCNNode()
-        box.geometry = boxGeo
-        if let geo = box.geometry {
-            geo.materials = [boxMat]
-        }
+        let textNode = SCNNode(geometry: textGeo)
+        textNode.position = SCNVector3(0, 0.1, -0.5)
+        textNode.scale = SCNVector3(0.02, 0.02, 0.02)
         
-        box.position = SCNVector3(0, 0.1, -0.5)
-        
-        scene.rootNode.addChildNode(box)
-        
+        scene.rootNode.addChildNode(textNode)
         
         // Set the scene to the view
         sceneView.scene = scene
