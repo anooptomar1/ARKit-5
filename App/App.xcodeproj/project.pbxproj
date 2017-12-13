@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F32AD641FE1BE3F000E59F8 /* VanillaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32AD631FE1BE3F000E59F8 /* VanillaVC.swift */; };
 		7F32AD661FE1BE69000E59F8 /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32AD651FE1BE69000E59F8 /* TextVC.swift */; };
+		7F32AD681FE1C057000E59F8 /* MultipleObjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32AD671FE1C057000E59F8 /* MultipleObjectsVC.swift */; };
 		7F4BCE6E1FE07E0F00322494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BCE6D1FE07E0F00322494 /* AppDelegate.swift */; };
 		7F4BCE701FE07E0F00322494 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F4BCE6F1FE07E0F00322494 /* art.scnassets */; };
 		7F4BCE721FE07E0F00322494 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BCE711FE07E0F00322494 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		7F32AD631FE1BE3F000E59F8 /* VanillaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanillaVC.swift; sourceTree = "<group>"; };
 		7F32AD651FE1BE69000E59F8 /* TextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
+		7F32AD671FE1C057000E59F8 /* MultipleObjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleObjectsVC.swift; sourceTree = "<group>"; };
 		7F4BCE6A1FE07E0F00322494 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4BCE6D1FE07E0F00322494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F4BCE6F1FE07E0F00322494 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				7F4BCE821FE07E3A00322494 /* SimpleBoxVC.swift */,
 				7F32AD631FE1BE3F000E59F8 /* VanillaVC.swift */,
 				7F32AD651FE1BE69000E59F8 /* TextVC.swift */,
+				7F32AD671FE1C057000E59F8 /* MultipleObjectsVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				7F32AD641FE1BE3F000E59F8 /* VanillaVC.swift in Sources */,
 				7F4BCE6E1FE07E0F00322494 /* AppDelegate.swift in Sources */,
 				7F32AD661FE1BE69000E59F8 /* TextVC.swift in Sources */,
+				7F32AD681FE1C057000E59F8 /* MultipleObjectsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
